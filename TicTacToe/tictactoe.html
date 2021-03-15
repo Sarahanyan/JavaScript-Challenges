@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>TicTacToe</title>
+</head>
+<body>
+    <main>
+        <div class="vscomp-form-container">
+            <form action="" method="get" id="vs-computer">
+                <p>To play against the computer choose X or O then click the "play button". Otherwise start the game against a human opponent Do you want to be X or O</p>
+                <input type="radio" name="player-symbol" id="playerx" checked>
+                <label for="player-x">X</label>
+                <input type="radio" name="player-symbol" id="playero">
+                <label for="player-o">O</label><br>
+                <button type="submit">Play against the computer</button> 
+            </form>
+            <p id="vsCompMsg" style="opacity: 0;">Playing against the computer</p>
+        </div>
+        <div class="game-board-container">
+            <h2>TIC TAC TOE</h2>
+            <div class="game-status">
+                <h4 id="player">X's Turn</h4>
+                <h4 id="reset-game">Reset</h4>
+            </div>
+            <div class="game-grid">
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+                <div class="game-cell"></div>
+            </div>
+        </div>
+    </main>
+    
+<script src="./script.js"></script>
+</body>
+</html>

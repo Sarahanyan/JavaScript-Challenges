@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Challenges</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+<div class="container">
+	<div class="container-1">
+		<div class="flex-box-container-1">
+			<h2>Challenge 1: Age in Days</h2>
+		</div>
+		<div class="flex-box-container-1">
+			<h5>When were you born? </h5>
+			<select id="year-input"></select><select id="month-input"></select><select id="date-input"></select>
+				
+		</div>
+		<div class="flex-box-container-1">
+			<div>
+				<button class="btn btn-primary" onclick="calcAgeInDays()">Click me</button>
+			</div>
+			<div>
+				<button class="btn btn-danger" onclick="reset()">Reset</button>
+			</div>
+		</div>
+		<div class="flex-box-container-1">
+			<div id="flex-box-result"></div>
+		</div>		
+	</div>
+
+	<div class="container-2">
+		<h2>Challenge 2: Cat Generator</h2>
+		<button class="btn btn-success" onclick="generateCat()">Generate</button>
+		<div class="flex-box-container-2" id="flex-cat-generator">
+			<!-- <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small"> -->
+		</div>
+	</div>
+	
+	<div class="container-3">
+		<h2>Challenge 3: Rock, Paper, Scissors</h2>
+		<div id="rps-flex-div" class="flex-box-container-rps">
+			<div id="rock-div">
+				<img id="rock" class="flex-box-container-rps-img" src="static/images/Rock Clipart 23431.png" onclick="rpsGame(this)">
+			</div>	
+			<div id="paper-div">
+				<img id="paper" class="flex-box-container-rps-img" src="static/images/Paper Clip Art 14245.jpg" onclick="rpsGame(this)">
+			</div>
+			<div id="scissors-div">
+				<img id="scissors" class="flex-box-container-rps-img" src="static/images/Scissors Clip Art 16134.png" onclick="rpsGame(this)">	
+			</div>
+		</div>	
+	</div>
+
+	<div class="container-4">
+		<h2 id="change-my-color">Challenge 4: Change Button Colour</h2>
+		<div class="flex-box-container-pick-color">
+			<form action="">
+				<select name="button-color" id="btn-color-select" onchange="buttonColorChange(this)">
+					<option value="red">Red</option>
+					<option value="blue">Blue</option>
+					<option value="yellow">Yellow</option>
+					<option value="green">Green</option>
+					<option value="random">Random</option>
+					<option value="reset">Reset</option>
+				</select>
+			</form>
+			<button class="btn btn-primary">Wee</button>
+			<button class="btn btn-warning">Yahoo</button>
+			<button class="btn btn-success">Facebook</button>
+			<button class="btn btn-danger">Google</button>
+		</div>
+	</div>
+
+	<div class="container-5">
+		<h2>CHALLENGE 5: BLACKJACK</h2>
+		<h3><span id="blackjack-result">Lets Play</span></h3>
+		<div class="flex-blackjack-row-1">
+			<div id="you-box">
+				<h3>You <span id="your-blackjack-result">0</span></h3>
+			</div>
+			<div id="dealer-box">
+				<h3>Dealer <span id="dealer-blackjack-result">0</span></h3>
+			</div>
+		</div>
+		<div class="flex-blackjack-row-2">
+			<div>
+				<button class="btn-lg btn-primary mr-2" id="blackjack-hit-button">Hit</button>
+				<button class="btn-lg btn-warning mr-2" id="blackjack-stand-button">Stand</button>
+				<button class="btn-lg btn-danger" id="blackjack-deal-button">Deal</button>
+			</div>
+		</div>
+		<div class="flex-blackjack-row-3">
+			<table>
+				<tr>
+					<th>Wins</th>
+					<th>Draws</th>
+					<th>Losses</th>
+				</tr>
+				<tr>
+					<td><span id="wins">0</span></td>
+					<td><span id="draws">0</span></td>
+					<td><span id="losses">0</span></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+</div>
+
+	<script type="text/javascript" src="static/js/script.js"></script>
+	<!-- <script type="text/javascript" src="static/js/test.js"></script> -->
+</body>
+</html>

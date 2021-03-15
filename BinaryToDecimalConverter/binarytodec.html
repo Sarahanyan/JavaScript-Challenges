@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary To Decimal Converter</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #636363;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to top, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to top, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        section{
+            width: 70vw;
+            height: 30vw;
+            background: white;
+            margin: 10rem auto;
+            border: 0.2rem solid #636363;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 5rem;
+        }
+
+         input, button {
+            font-size: 2.5rem; 
+            border: 0.2rem solid #636363;
+            padding: 0.5rem;
+        }
+
+        form {
+            background-color: #a1ab5848;
+            padding: 2rem;
+        }
+
+        button {
+            background: #636363;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            color: white;
+            background: #a2ab58;
+            cursor: pointer;
+            border: 0.2rem solid #a1ab58a9;
+        }
+
+        #result {
+            width: 70%;
+            font-size: 3rem;
+            text-align: center;
+            margin: 3rem;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <form action="">
+                <input type="text" name="binNum" placeholder="type your binary here">
+                <button type="submit">Convert</button>
+            </form>
+            <div id="result">Result</div>
+        </section>
+          
+    </main>
+
+    <script>
+        const handleSubmit = (event) => {
+                event.preventDefault()
+                let binaryNum = event.target.binNum.value
+                let decimalNum = 0
+                let counter = binaryNum.length - 1
+                let charInDecimal = 0
+
+                for (const char of binaryNum) { 
+                    let charInDecimal = parseInt(char) * (2 ** counter)
+                    decimalNum += charInDecimal
+                    counter--
+                }
+
+                const resultDiv = document.querySelector("#result")
+                const text = document.createTextNode(decimalNum)
+                resultDiv.childNodes[0].replaceWith(text)
+            }
+
+        const form = document.querySelector("form")
+        form.addEventListener("submit", handleSubmit)
+        const binInput = document.querySelector("input")
+
+
+    </script>
+</body>
+</html>
